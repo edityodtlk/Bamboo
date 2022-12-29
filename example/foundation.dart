@@ -20,24 +20,26 @@ class FoundationWidget extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(5)),
               color: Color(0xff95D9FF),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Desktop Breakpoint ${bambooBreakPoint.desktop}'),
-                Text('Normal Hieght ${context.height}'),
-                Text('Mobile ${context.isMobile}'),
-                Text('Tablet ${context.isTablet}'),
-                Text('Desktop ${context.isDesktop}'),
-                Text('Large ${context.isLarge}'),
-                Text('Orientation ${context.orientation}'),
-                BambooImage(
-                  mobile: imageMobile,
-                  desktop: imageDesktop,
-                  builder: (context, path) {
-                    return Image.network(path);
-                  },
-                ),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Desktop Breakpoint ${bambooBreakPoint.desktop}'),
+                  Text('Normal Hieght ${context.height}'),
+                  Text('Mobile ${context.isMobile}'),
+                  Text('Tablet ${context.isTablet}'),
+                  Text('Desktop ${context.isDesktop}'),
+                  Text('Large ${context.isLarge}'),
+                  Text('Orientation ${context.orientation}'),
+                  BambooImage(
+                    mobile: imageMobile,
+                    desktop: imageDesktop,
+                    builder: (context, path) {
+                      return Image.network(path);
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),

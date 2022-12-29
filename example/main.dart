@@ -1,9 +1,8 @@
+import 'package:bamboo/bamboo.dart';
 import 'package:flutter/material.dart';
 
-
 import 'foundation.dart';
+
 void main() {
-  runApp(const FoundationWidget());
+  runApp(BambooBreakPoint(child: MaterialApp(home: const FoundationWidget())));
 }
-
-
