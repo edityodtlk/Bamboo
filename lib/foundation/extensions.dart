@@ -25,11 +25,10 @@ extension ResponsiveUtil on BuildContext {
       breakpoint!.mobile < width && width <= breakpoint!.tablet;
 
   /// Check if screen is desktop
-  bool get isDesktop =>
-      breakpoint!.tablet < width && width <= breakpoint!.desktop;
+  bool get isDesktop => breakpoint!.tablet < width;
 
   /// Extra large
-  bool get isLarge => breakpoint!.desktop < width;
+  bool get isLarge => isDesktop;
 
   /// Return longestSidebased on orietation
   double get longestSide => MediaQuery.of(this).size.longestSide;
